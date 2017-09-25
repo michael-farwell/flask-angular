@@ -2,31 +2,51 @@
 <html lang='en' ng-app='myApp' class='no-js'>
 
 <head>
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>My AngularJS App</title>
     <meta name='description' content=''>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>My AngularJS/Flask App</title>
+
+    <!-- Bootstrap v4 CSS-->
     <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
-    <link rel='stylesheet' href='bower_components/html5-boilerplate/dist/css/normalize.css'>
-    <link rel='stylesheet' href='bower_components/html5-boilerplate/dist/css/main.css'>
+
+    <!-- Custom CSS-->
     <link rel='stylesheet' href='app.css'>
-    <script src='bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js'></script>
+
 </head>
 
 <body>
-<div class='container'>
-    <div class='header clearfix'>
-        <nav>
-            <ul class='nav nav-pills pull-right'>
-                <li role='presentation' class='active'><a href='#home'>Home</a></li>
-                <li role='presentation'><a href='#signin'>SignIn</a></li>
-                <li role='presentation'><a href='#signup'>SignUp</a></li>
-            </ul>
-        </nav>
-        <h3 class='text-muted'>AngularJS & Python</h3>
-    </div>
 
+<div class='container'>
+
+    <!-- Navbar Start -->
+
+    <nav class='navbar navbar-toggleable-md navbar-light bg-faded'>
+        <button class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse'
+                data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false'
+                aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <a class='navbar-brand' href='#'>AngularJS & Python</a>
+
+        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav mr-auto'>
+                <li class='nav-item'>
+                    <a class='nav-link' href='#signin'>Sign In</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='#signup'>Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar End-->
+
+    <!-- Angular Router Output-->
     <div ng-view></div>
 
     <footer class='footer'>
@@ -34,14 +54,21 @@
     </footer>
 
 </div>
+<!-- Bootstrap Required Javascript Files-->
+<script src='bower_components/jquery/dist/jquery.min.js'></script>
+<script src='bower_components/tether/dist/js/tether.min.js'></script>
+<script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
 
+<!-- AngularJS Require Javascript Files-->
 <script src='bower_components/angular/angular.js'></script>
 <script src='bower_components/angular-route/angular-route.js'></script>
 
+<!-- App Javascript Files-->
 <script src='app.js'></script>
-<script type='text/javascript' src='/components/home/home.js'></script>
-<script type='text/javascript' src='/components/signin/signin.js'></script>
-<script type='text/javascript' src='/components/signup/signup.js'></script>
+<script type='text/javascript' src='components/home/home.js'></script>
+<script type='text/javascript' src='components/signin/signin.js'></script>
+<script type='text/javascript' src='components/signup/signup.js'></script>
+
 </body>
 
 </html>
