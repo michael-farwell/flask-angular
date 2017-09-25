@@ -10,7 +10,6 @@ angular.module('myApp.signup', ['ngRoute'])
         });
       }])
 
-    .controller('SignUpCtrl', [
-      function() {
+    .controller('SignUpCtrl', function($scope) {
 
-      }]);
+    });

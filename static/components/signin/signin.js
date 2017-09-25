@@ -10,6 +10,6 @@ angular.module('myApp.signin', ['ngRoute'])
         });
       }])
 
-    .controller('SignInCtrl', function() {
+    .controller('SignInCtrl', function($scope) {
 
     });
