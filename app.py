@@ -15,5 +15,12 @@ def get_title():
     return jsonify(title)
 
 
+@app.route('/get_user/<user>')
+def get_user(user):
+    print('Getting user...')
+    user = user
+    return jsonify(user)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

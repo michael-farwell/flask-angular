@@ -24,4 +24,15 @@ angular.module('myApp.home', [
             $scope.title = 'Failed to Get Title';
           });
 
+      $http({
+              method: 'GET',
+              url: 'get_user/User'
+            })
+          .then(function(success) {
+            $scope.user = success.data;
+          }, function(error) {
+            $scope.user = 'No User Found';
+
+          });
+
     });
