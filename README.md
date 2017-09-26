@@ -27,8 +27,6 @@ Install Angular Requirements
 
 ~~~
 npm install
-
-bower install
 ~~~
 
 Starting the App
