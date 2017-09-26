@@ -20,7 +20,7 @@ cd flask-angular
 Install Flask requirements
 
 ~~~
-pip install requirements.txt
+pip install -r requirements.txt
 ~~~
 
 Install Angular Requirements
